@@ -41,8 +41,10 @@ android {
 dependencies {
     implementation(projects.shared)
     implementation(libs.compose.ui)
-    implementation(libs.compose.ui.tooling.preview)
-    implementation(libs.compose.material3)
+    implementation("androidx.compose.material3:material3:1.2.1")
+    implementation("androidx.compose.material3:material3-window-size-class:1.2.1")
+    implementation("androidx.compose.material3:material3-adaptive-navigation-suite:1.3.0-beta03")
     implementation(libs.androidx.activity.compose)
-    debugImplementation(libs.compose.ui.tooling)
+    debugImplementation("androidx.compose.ui:ui-tooling:1.6.7")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.6.7")
 }

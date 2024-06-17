@@ -5,6 +5,8 @@ expect class Platform {
     val osVersion: String
     val deviceModel: String
     val density: Int
+    val appVersion: String
+    val manufacturer: String
 
     fun logSystemInfo()
 }
