@@ -1,8 +1,4 @@
 ﻿<a name="_int_dkgxm26x"></a>App development with KMP, Ktor, Koin
-# Why KMP?
-- Truly native UI (User Interface)
-- Shared business logic
-- Shared infrastructure & boilerplate code
 # What is KMP?
 Kotlin Multiplatform is a Kotlin based framework that allows infrastructure code sharing between several front-end platforms.
 
@@ -12,6 +8,10 @@ Supported Platforms
 - iOS
 - Web
 - Desktop
+# Why KMP?
+- Truly native UI (User Interface)
+- Shared business logic
+- Shared infrastructure & boilerplate code
 # How KMP works?
 ![How KMM works?](Aspose.Words.296d0f5b-bb4b-44a0-947f-1693c58b2acb.001.png)
 
