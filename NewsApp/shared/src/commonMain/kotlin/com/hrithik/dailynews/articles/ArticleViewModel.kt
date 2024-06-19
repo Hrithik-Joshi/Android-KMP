@@ -4,7 +4,7 @@ import com.hrithik.dailynews.BaseViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
-class ArticleViewModel : BaseViewModel() {
+class  ArticleViewModel : BaseViewModel() {
 
     /* It holds an initial state of ArticleState.
     MutableStateFlow is a state holder observable that holds a single value

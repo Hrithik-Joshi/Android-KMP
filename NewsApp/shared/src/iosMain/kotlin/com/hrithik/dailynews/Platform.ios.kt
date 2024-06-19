@@ -13,4 +13,9 @@ actual class Platform() {
 
     actual fun logSystemInfo() {
     }
+
+    actual val appVersion: String
+        get() = TODO("Not yet implemented")
+    actual val manufacturer: String
+        get() = TODO("Not yet implemented")
 }
