@@ -47,4 +47,7 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     debugImplementation("androidx.compose.ui:ui-tooling:1.6.7")
     implementation("androidx.compose.ui:ui-tooling-preview:1.6.7")
+    implementation("com.github.bumptech.glide:compose:1.0.0-beta01")
+    implementation("com.google.accompanist:accompanist-swiperefresh:0.18.0")
+
 }
