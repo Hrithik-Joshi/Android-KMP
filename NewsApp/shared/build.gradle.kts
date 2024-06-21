@@ -11,7 +11,7 @@ kotlin {
             }
         }
     }
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -26,15 +26,23 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             //put your multiplatform dependencies here
-            implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.client.content.negotiation)
+            implementation(libs.ktor.serialization.kotlinx.json)
+            implementation(libs.kotlinx.datetime)
         }
-
         androidMain.dependencies {
             implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.2")
+            implementation(libs.ktor.client.android)
+        }
+        iosMain.dependencies {
+            implementation(libs.ktor.client.darwin)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
+
     }
 }
 
