@@ -9,7 +9,11 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -27,17 +31,17 @@ import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
 import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.SwipeRefreshState
-import com.hrithik.dailynews.android.AppBar
 import com.hrithik.dailynews.articles.Article
 import com.hrithik.dailynews.articles.ArticleViewModel
 
 @Composable
 fun ArticleScreen(
+    onAboutButtonClick: () -> Unit,
     articlesViewModel: ArticleViewModel
 ) {
     val articlesState = articlesViewModel.articleState.collectAsState()
     Column {
-        AppBar()
+        AppBar(onAboutButtonClick)
         if (articlesState.value.error != null)
             ErrorMessage(articlesState.value.error!!)
         if (articlesState.value.articles.isNotEmpty())
@@ -47,8 +51,17 @@ fun ArticleScreen(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-public fun AppBar() {
-    TopAppBar(title = { Text(text = "Article") })
+public fun AppBar(onAboutButtonClick: () -> Unit) {
+    TopAppBar(title = { Text(text = "Article") },
+        actions = {
+            IconButton(onClick = onAboutButtonClick) {
+                Icon(
+                    imageVector = Icons.Outlined.Info,
+                    contentDescription = "About Device Button",
+                )
+            }
+        }
+    )
 }
 
 @Composable

@@ -13,7 +13,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import com.hrithik.dailynews.android.screens.ArticleScreen
 import com.hrithik.dailynews.articles.ArticleViewModel
 
 class MainActivity : ComponentActivity() {
@@ -26,7 +25,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = Color.White
                 ) {
-                    ArticleScreen(articlesViewModel = articleViewModel)
+                    AppScaffold(articlesViewModel = articleViewModel)
                 }
             }
         }
