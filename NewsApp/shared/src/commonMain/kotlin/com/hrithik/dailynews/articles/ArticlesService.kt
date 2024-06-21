@@ -7,7 +7,7 @@ import io.ktor.client.request.get
 class ArticlesService(private val httpClient: HttpClient) {
 
     private val country = "us"
-    private val category = "techcrunch"
+    private val category = "business"
     private val apiKey = "408fca3a4b3e47479110213cac57143a"
 
     suspend fun fetchArticles(): List<ArticleRaw> {
