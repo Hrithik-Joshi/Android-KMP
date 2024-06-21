@@ -10,7 +10,7 @@ import kotlin.math.abs
 
 class ArticlesUseCase(private val service: ArticlesService) {
 
-    suspend fun getArticles(forceFetch: Boolean): List<Article> {
+    suspend fun getArticles(): List<Article> {
         val articlesRaw = service.fetchArticles()
         return mapArticles(articlesRaw)
     }
