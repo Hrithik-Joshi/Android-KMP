@@ -50,4 +50,6 @@ dependencies {
     implementation("com.github.bumptech.glide:compose:1.0.0-beta01")
     implementation("com.google.accompanist:accompanist-swiperefresh:0.18.0")
     implementation("androidx.navigation:navigation-compose:2.7.7")
+    implementation(libs.koin.android)
+    implementation(libs.koin.androidx.compose)
 }
