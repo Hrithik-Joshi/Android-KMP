@@ -1,5 +1,7 @@
-package com.hrithik.dailynews.articles
+package com.hrithik.dailynews.articles.domain
 
+import com.hrithik.dailynews.articles.data.ArticleRaw
+import com.hrithik.dailynews.articles.data.ArticlesService
 import kotlinx.datetime.Clock
 import kotlinx.datetime.Instant
 import kotlinx.datetime.TimeZone

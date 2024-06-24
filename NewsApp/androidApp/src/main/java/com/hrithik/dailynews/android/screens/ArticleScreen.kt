@@ -32,8 +32,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
-import com.hrithik.dailynews.articles.Article
-import com.hrithik.dailynews.articles.ArticleViewModel
+import com.hrithik.dailynews.articles.domain.Article
+import com.hrithik.dailynews.articles.presentation.ArticleViewModel
 import org.koin.androidx.compose.getViewModel
 
 @Composable

@@ -1,5 +1,6 @@
-package com.hrithik.dailynews.articles
+package com.hrithik.dailynews.articles.data
 
+import com.hrithik.dailynews.articles.data.ArticleRaw
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 

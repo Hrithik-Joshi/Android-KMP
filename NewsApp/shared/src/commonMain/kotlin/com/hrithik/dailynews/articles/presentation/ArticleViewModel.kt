@@ -1,13 +1,11 @@
-package com.hrithik.dailynews.articles
+package com.hrithik.dailynews.articles.presentation
 
 import com.hrithik.dailynews.BaseViewModel
-import io.ktor.client.HttpClient
-import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
-import io.ktor.serialization.kotlinx.json.json
+import com.hrithik.dailynews.articles.domain.ArticlesUseCase
+import com.hrithik.dailynews.articles.presentation.ArticleState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import kotlinx.serialization.json.Json
 
 class ArticleViewModel(
     private val useCase: ArticlesUseCase

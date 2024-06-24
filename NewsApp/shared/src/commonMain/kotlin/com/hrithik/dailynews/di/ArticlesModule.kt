@@ -1,8 +1,7 @@
 package com.hrithik.dailynews.di
 
-import com.hrithik.dailynews.articles.ArticleViewModel
-import com.hrithik.dailynews.articles.ArticlesService
-import com.hrithik.dailynews.articles.ArticlesUseCase
+import com.hrithik.dailynews.articles.data.ArticlesService
+import com.hrithik.dailynews.articles.domain.ArticlesUseCase
 import org.koin.dsl.module
 
 val articlesModule = module {
