@@ -9,7 +9,9 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
 
-class ArticleViewModel : BaseViewModel() {
+class ArticleViewModel(
+    private val useCase: ArticlesUseCase
+) : BaseViewModel() {
 
     /* It holds an initial state of ArticleState.
     MutableStateFlow is a state holder observable that holds a single value
@@ -25,23 +27,8 @@ class ArticleViewModel : BaseViewModel() {
     val articleState: StateFlow<ArticleState>
         get() = _articleState
 
-    private val useCase: ArticlesUseCase
 
     init {
-        val httpClient = HttpClient {
-            install(ContentNegotiation) {
-                json(Json {
-                    prettyPrint = true
-                    isLenient = true
-                    ignoreUnknownKeys = true
-                })
-            }
-        }
-
-        val service = ArticlesService(httpClient)
-
-        useCase = ArticlesUseCase(service)
-
         getArticles()
     }
 

@@ -34,11 +34,12 @@ import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
 import com.hrithik.dailynews.articles.Article
 import com.hrithik.dailynews.articles.ArticleViewModel
+import org.koin.androidx.compose.getViewModel
 
 @Composable
 fun ArticleScreen(
     onAboutButtonClick: () -> Unit,
-    articlesViewModel: ArticleViewModel
+    articlesViewModel: ArticleViewModel = getViewModel()
 ) {
     val articlesState = articlesViewModel.articleState.collectAsState()
     Column {
@@ -54,7 +55,7 @@ fun ArticleScreen(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-public fun AppBar(onAboutButtonClick: () -> Unit) {
+fun AppBar(onAboutButtonClick: () -> Unit) {
     TopAppBar(title = { Text(text = "Article") },
         actions = {
             IconButton(onClick = onAboutButtonClick) {
